@@ -12,7 +12,7 @@ class OneWayTabComponent extends Component {
         <InputBar label="Enter destination city"/>
         <DatePickers label="Departure date"/>
         <DatePickers label="Return date"/>
-        <DropDown label="Return date"/>
+        <DropDown label="Passengers"/>
         <ButtonWithIcon />
       </div>
     );

@@ -4,6 +4,8 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import SwipeableViews from 'react-swipeable-views';
 import OneWayTabComponent from './one-way-tab';
+import ReturnTabComponent from './return-tab';
+import StepSlider from './../slider'
 
 class SearchSectionComponent extends Component {
     state = {
@@ -36,8 +38,9 @@ class SearchSectionComponent extends Component {
                     onChangeIndex={this.handleChangeIndex}
                 >
                     <TabContainer><OneWayTabComponent /></TabContainer>
-                    <TabContainer>Item Two</TabContainer>
+                    <TabContainer><ReturnTabComponent /></TabContainer>
                 </SwipeableViews>
+                <StepSlider />
 
             </div>
         );

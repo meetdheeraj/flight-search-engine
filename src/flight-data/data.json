@@ -1,0 +1,90 @@
+[{
+    "flightName": "A1-213",
+    "origin": "PNQ",
+    "destination": "DEL",
+    "arrivalTime": "10:24 AM",
+    "departureTime": "10:58 AM",
+    "price": "4000",
+    "date": "2018-09-21T00:00:00.000Z"
+  },
+  {
+    "flightName": "A1-234",
+    "origin": "PNQ",
+    "destination": "DEL",
+    "arrivalTime": "10:24 AM",
+    "departureTime": "10:58 AM",
+    "price": "4000",
+    "date": "2018-09-21T00:00:00.000Z"
+  },
+  {
+    "flightName": "A1-657",
+    "origin": "PNQ",
+    "destination": "DEL",
+    "arrivalTime": "10:24 AM",
+    "departureTime": "10:58 AM",
+    "price": "4000",
+    "date": "2018-09-21T00:00:00.000Z"
+  },
+  {
+    "flightName": "H6-887",
+    "origin": "PNQ",
+    "destination": "DEL",
+    "arrivalTime": "10:24 AM",
+    "departureTime": "10:58 AM",
+    "price": "4000",
+    "date": "2018-09-21T00:00:00.000Z"
+  },
+  {
+    "flightName": "G5-546",
+    "origin": "PNQ",
+    "destination": "DEL",
+    "arrivalTime": "10:24 AM",
+    "departureTime": "10:58 AM",
+    "price": "4000",
+    "date": "2018-09-21T00:00:00.000Z"
+  },
+  {
+    "flightName": "F4-786",
+    "origin": "PNQ",
+    "destination": "DEL",
+    "arrivalTime": "10:24 AM",
+    "departureTime": "10:58 AM",
+    "price": "4000",
+    "date": "2018-09-21T00:00:00.000Z"
+  },
+  {
+    "flightName": "D4-890",
+    "origin": "PNQ",
+    "destination": "DEL",
+    "arrivalTime": "10:24 AM",
+    "departureTime": "10:58 AM",
+    "price": "4000",
+    "date": "2018-09-21T00:00:00.000Z"
+  },
+  {
+    "flightName": "A1-702",
+    "origin": "PNQ",
+    "destination": "DEL",
+    "arrivalTime": "10:24 AM",
+    "departureTime": "10:58 AM",
+    "price": "4000",
+    "date": "2018-09-21T00:00:00.000Z"
+  },
+  {
+    "flightName": "U6-329",
+    "origin": "DEL",
+    "destination": "PNQ",
+    "arrivalTime": "10:24 AM",
+    "departureTime": "10:58 AM",
+    "price": "4000",
+    "date": "2018-09-25T00:00:00.000Z"
+  },
+  {
+    "flightName": "C4-883",
+    "origin": "PNQ",
+    "destination": "DEL",
+    "arrivalTime": "10:24 AM",
+    "departureTime": "10:58 AM",
+    "price": "4000",
+    "date": "2018-09-21T00:00:00.000Z"
+  }]
