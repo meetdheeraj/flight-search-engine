@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import InputBar from '../components/input-bar';
 
-it('renders without crashing', () => {
+it('<InputBar /> renders without crashing', () => {
   const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
+  ReactDOM.render(<InputBar />, div);
   ReactDOM.unmountComponentAtNode(div);
 });

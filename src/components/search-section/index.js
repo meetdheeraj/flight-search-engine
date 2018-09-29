@@ -3,9 +3,10 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import SwipeableViews from 'react-swipeable-views';
-import OneWayTabComponent from './one-way-tab';
-import ReturnTabComponent from './return-tab';
-import StepSlider from './../slider'
+import SearchTabComponent from './search-tab';
+import StepSlider from './../slider';
+import './search-section.css';
+import Grid from '@material-ui/core/Grid';
 
 class SearchSectionComponent extends Component {
     constructor(props) {
@@ -22,8 +23,18 @@ class SearchSectionComponent extends Component {
     handleChangeIndex = index => {
         this.setState({ value: index });
     };
+
+    handleSliderChange = (value) => {
+        this.props.handleSliderChange(value);
+    };
+
     render() {
         return (
+            <Grid
+            container
+            spacing={8}
+           >
+           <Grid item xs={12}>
             <div className="search-section-container">
                 <Tabs
                     value={this.state.value}
@@ -40,12 +51,14 @@ class SearchSectionComponent extends Component {
                     index={this.state.value}
                     onChangeIndex={this.handleChangeIndex}
                 >
-                    <TabContainer><OneWayTabComponent onSubmit={this.onSubmit} /></TabContainer>
-                    <TabContainer><ReturnTabComponent onSubmit={this.onSubmit} /></TabContainer>
+                    <TabContainer><SearchTabComponent showReturn={false} onSubmit={this.onSubmit} /></TabContainer>
+                    <TabContainer><SearchTabComponent showReturn={true} onSubmit={this.onSubmit} /></TabContainer>
                 </SwipeableViews>
-                <StepSlider />
+                <StepSlider handleSliderChange={this.handleSliderChange} />
 
             </div>
+            </Grid>
+            </Grid>
         );
     }
 

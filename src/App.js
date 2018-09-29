@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import logo from './flight.svg';
 import './App.css';
 import 'typeface-roboto';
 import SearchSectionComponent from './components/search-section';
@@ -11,14 +11,13 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      flightList: [],
-      isReturn: false,
       searchObject: {
-        origin: "",
-        destination: "",
-        dateOfDeparture: "",
+        origin: "PNQ",
+        destination: "DEL",
+        dateOfDeparture: "2018-09-21",
         dateOfReturn: "",
-        noOfPassengers: ""
+        noOfPassengers: "",
+        price: ""
       }
     };
   }
@@ -26,34 +25,34 @@ class App extends Component {
     return (
       <div className="App">
         <Grid container spacing={8}>
-          <Grid item xs={12}>
+          <Grid item md={12}>
             <header className="App-header">
               <img src={logo} className="App-logo" alt="logo" />
               <h1 className="App-title">Flight Search Engine</h1>
             </header>
           </Grid>
-          <Grid item xs={12}>
+          <Grid item md={12}>
             <div className="App-intro">
               <Grid
                 container
                 spacing={8}
                 direction="row"
               >
-                <Grid item xs={3}>
+                <Grid item md={3}>
                   <div className="search-section" >
-                    <SearchSectionComponent searchFlights={this.searchFlights} />
+                    <SearchSectionComponent handleSliderChange={this.handleSliderChange} searchFlights={this.searchFlights} />
                   </div>
                 </Grid>
-                <Grid item xs={9}>
+                <Grid item md={9}>
                   <div className="search-result">
-                    <Grid item xs={9}>
+                    <Grid item md={9}>
                       <div className="search-result-header">
                         <SearchResultHeader origin={this.state.searchObject.origin}
                           destination={this.state.searchObject.destination}
                           dateOfDeparture={this.state.searchObject.dateOfDeparture}
                           dateOfReturn={this.state.searchObject.dateOfReturn} /></div>
                     </Grid>
-                    <Grid item xs={9}>
+                    <Grid item md={9}>
                       <div className="search-result-list"><FlightListComponent searchObject={this.state.searchObject} /></div>
                     </Grid>
                   </div>
@@ -65,6 +64,13 @@ class App extends Component {
       </div>
     );
   }
+
+  handleSliderChange = (value) => {
+    let searchObject = this.state.searchObject;
+    searchObject.price = value;
+    this.setState({ searchObject });
+    console.log("################", value);
+  };
 
   searchFlights = (search) => {
     this.setState({ searchObject: search }, () => { console.log("******appJS : :", this.state.searchObject) });

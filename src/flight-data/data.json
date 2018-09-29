@@ -5,7 +5,7 @@
     "arrivalTime": "10:24 AM",
     "departureTime": "10:58 AM",
     "price": "4000",
-    "date": "2018-09-21T00:00:00.000Z"
+    "date": "2018-09-21"
   },
   {
     "flightName": "A1-234",
@@ -14,7 +14,7 @@
     "arrivalTime": "10:24 AM",
     "departureTime": "10:58 AM",
     "price": "4000",
-    "date": "2018-09-21T00:00:00.000Z"
+    "date": "2018-09-21"
   },
   {
     "flightName": "A1-657",
@@ -23,7 +23,7 @@
     "arrivalTime": "10:24 AM",
     "departureTime": "10:58 AM",
     "price": "4000",
-    "date": "2018-09-21T00:00:00.000Z"
+    "date": "2018-09-21"
   },
   {
     "flightName": "H6-887",
@@ -32,7 +32,7 @@
     "arrivalTime": "10:24 AM",
     "departureTime": "10:58 AM",
     "price": "4000",
-    "date": "2018-09-21T00:00:00.000Z"
+    "date": "2018-09-21"
   },
   {
     "flightName": "G5-546",
@@ -41,7 +41,7 @@
     "arrivalTime": "10:24 AM",
     "departureTime": "10:58 AM",
     "price": "4000",
-    "date": "2018-09-21T00:00:00.000Z"
+    "date": "2018-09-21"
   },
   {
     "flightName": "F4-786",
@@ -50,7 +50,7 @@
     "arrivalTime": "10:24 AM",
     "departureTime": "10:58 AM",
     "price": "4000",
-    "date": "2018-09-21T00:00:00.000Z"
+    "date": "2018-09-21"
   },
   {
     "flightName": "D4-890",
@@ -59,7 +59,7 @@
     "arrivalTime": "10:24 AM",
     "departureTime": "10:58 AM",
     "price": "4000",
-    "date": "2018-09-21T00:00:00.000Z"
+    "date": "2018-09-21"
   },
   {
     "flightName": "A1-702",
@@ -68,7 +68,7 @@
     "arrivalTime": "10:24 AM",
     "departureTime": "10:58 AM",
     "price": "4000",
-    "date": "2018-09-21T00:00:00.000Z"
+    "date": "2018-09-21"
   },
   {
     "flightName": "U6-329",
@@ -77,7 +77,7 @@
     "arrivalTime": "10:24 AM",
     "departureTime": "10:58 AM",
     "price": "4000",
-    "date": "2018-09-25T00:00:00.000Z"
+    "date": "2018-09-25"
   },
   {
     "flightName": "C4-883",
@@ -86,5 +86,5 @@
     "arrivalTime": "10:24 AM",
     "departureTime": "10:58 AM",
     "price": "4000",
-    "date": "2018-09-21T00:00:00.000Z"
+    "date": "2018-09-21"
   }]

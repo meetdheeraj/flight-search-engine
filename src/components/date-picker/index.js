@@ -21,7 +21,6 @@ class DatePickers extends React.Component {
                     className={classNames(classes.margin, classes.textField)}
                     variant="outlined"
                     type="date"
-                    defaultValue="2017-05-24"
                     label={label}
                     InputProps={{
                         startAdornment: <InputAdornment position="start"></InputAdornment>,

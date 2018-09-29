@@ -1,3 +1,11 @@
 .search-result-header {
-    background-color: lightslategray;
+    padding-top: 6px;
+}
+
+.search-result-header .search-result {
+    background-color: moccasin;
+}
+
+.keyboard-arrow-right {
+    vertical-align: sub;
 }

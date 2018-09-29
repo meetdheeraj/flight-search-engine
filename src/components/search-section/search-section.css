@@ -1,3 +1,9 @@
 .text-field {
     flexBasis: 200;
   }
+
+  .search-section-container {
+    border: 2px solid grey;
+    border-radius: 5px;
+    margin-left: 8px;
+  }

@@ -11,13 +11,14 @@ class FlightListComponent extends Component {
       console.log(obj);
       return obj.origin === this.props.searchObject.origin
         && obj.destination === this.props.searchObject.destination
-        && obj.destination === this.props.searchObject.destination;
+        && obj.destination === this.props.searchObject.destination
+        && obj.date === this.props.searchObject.dateOfDeparture;
     });
     console.log("*******FlightListComponent 2 :: ", filteredFlightList);
     return (
       <div className="flight-list-container">
         {filteredFlightList.map((flight) => {
-            return <FlightComponent flight={flight}/>
+            return <FlightComponent key={flight.flightName} flight={flight}/>
         })}
       </div>
     );

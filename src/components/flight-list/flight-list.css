@@ -1,7 +1,24 @@
 .flight-row-container {
     padding-bottom: 8px;
+    text-align: left;
+}
+.flight-row-container .flight-component-row {
+    background-color: lemonchiffon;
+}
+.flight-price {
+    font-size: x-large;
+    font-weight: bold;
+    color: forestgreen;
 }
 
 .flight-list-container {
     padding: 8px 0px;
+}
+
+.flight-details-container {
+    text-align: left;
+}
+
+.flight-name, .flight-origin-destination {
+    font-weight: bold;
 }

@@ -1,0 +1,10 @@
+.price-slider-container {
+    border: 2px solid grey;
+    border-radius: 5px;
+    margin: 8px;
+}
+
+.slider-text {
+    text-align: left;
+    padding: 8px;
+}

@@ -8,8 +8,8 @@ class ButtonWithIcon extends React.Component {
         const { classes } = this.props;
         return (
             <div className="input-bar">
-                <Button onClick={this.onSubmit} variant="contained" color="primary" className={classes.button}>
-                    Send
+                <Button onClick={this.onSubmit} variant="contained" color="secondary" className={classes.button}>
+                    Send&nbsp;&nbsp;
                     <Send />
                 </Button>
             </div>
