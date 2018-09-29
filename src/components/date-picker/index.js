@@ -5,11 +5,19 @@ import { withStyles } from '@material-ui/core/styles';
 import classNames from 'classnames';
 
 class DatePickers extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            value: ""
+        };
+    }
     render() {
         const { classes, label } = this.props;
         return (
             <div className="input-bar">
                 <TextField
+                    value={this.state.value}
+                    onChange={this.onChange}
                     className={classNames(classes.margin, classes.textField)}
                     variant="outlined"
                     type="date"
@@ -22,6 +30,11 @@ class DatePickers extends React.Component {
                 </TextField>
             </div>
         );
+    }
+
+    onChange = (event) => {
+        this.setState({ value: event.target.value });
+        this.props.onChange(event.target.value);
     }
 }
 

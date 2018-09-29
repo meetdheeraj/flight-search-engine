@@ -5,11 +5,19 @@ import { withStyles } from '@material-ui/core/styles';
 import classNames from 'classnames';
 
 class InputBar extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            value: ""
+        };
+    }
     render() {
         const { classes, label } = this.props;
         return (
             <div className="input-bar">
                 <TextField
+                    value={this.state.value}
+                    onChange={this.onChange}
                     id="outlined-simple-start-adornment"
                     className={classNames(classes.margin, classes.textField)}
                     variant="outlined"
@@ -20,6 +28,11 @@ class InputBar extends React.Component {
                 />
             </div>
         );
+    }
+
+    onChange = (event) => {
+        this.setState({ value: event.target.value });
+        this.props.onChange(event.target.value);
     }
 }
 

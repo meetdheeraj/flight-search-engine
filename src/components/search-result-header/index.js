@@ -13,15 +13,15 @@ class SearchResultHeader extends Component {
             direction="row"
           >
           <Grid item xs={8}>
-        <text className="city-name">Pune</text>
+        <text className="city-name">{this.props.origin}</text>
         <span className="keyboard-arrow-right"><KeyboardArrowRight /></span>
-        <text className="city-name">Delhi</text>
+        <text className="city-name">{this.props.destination}</text>
         <KeyboardArrowRight />
-        <text className="city-name">Pune</text>
+        <text className="city-name">{this.props.origin}</text>
         </Grid>
         <Grid item xs={4}>
-        <div className="departure-date"><text className="header">Depart : </text>{"01-January-2018"}</div>
-        <div className="return-date"><text className="header">Return : </text>{"01-January-2018"}</div>
+        <div className="departure-date"><text className="header">Depart : </text>{this.props.dateOfDeparture}</div>
+        <div className="return-date"><text className="header">Return : </text>{this.props.dateOfReturn}</div>
         </Grid>
         </Grid>
       </div>

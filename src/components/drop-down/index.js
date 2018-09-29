@@ -6,9 +6,12 @@ import classNames from 'classnames';
 import MenuItem from '@material-ui/core/MenuItem';
 
 class DropDown extends React.Component {
-    state = {
-        valueRange: '',
-    };
+    constructor(props) {
+        super(props);
+        this.state = {
+            valueRange: ''
+        };
+    }
     render() {
         const { classes, label } = this.props;
         return (
@@ -36,6 +39,7 @@ class DropDown extends React.Component {
 
     handleChange = prop => event => {
         this.setState({ [prop]: event.target.value });
+        this.props.onChange(event.target.value);
     };
 }
 

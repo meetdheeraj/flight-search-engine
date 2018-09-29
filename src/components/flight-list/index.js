@@ -6,9 +6,17 @@ import flightList from './../../flight-data/data.json';
 
 class FlightListComponent extends Component {
   render() {
+    console.log("*******FlightListComponent 1 :: ", flightList);
+    const filteredFlightList = flightList.filter((obj) => {
+      console.log(obj);
+      return obj.origin === this.props.searchObject.origin
+        && obj.destination === this.props.searchObject.destination
+        && obj.destination === this.props.searchObject.destination;
+    });
+    console.log("*******FlightListComponent 2 :: ", filteredFlightList);
     return (
       <div className="flight-list-container">
-        {flightList.map((flight) => {
+        {filteredFlightList.map((flight) => {
             return <FlightComponent flight={flight}/>
         })}
       </div>

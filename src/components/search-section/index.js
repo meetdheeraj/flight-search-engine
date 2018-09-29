@@ -8,9 +8,12 @@ import ReturnTabComponent from './return-tab';
 import StepSlider from './../slider'
 
 class SearchSectionComponent extends Component {
-    state = {
-        value: 0,
-    };
+    constructor(props) {
+        super(props);
+        this.state = {
+            value: 0,
+        };
+    }
 
     handleChange = (event, value) => {
         this.setState({ value });
@@ -37,13 +40,17 @@ class SearchSectionComponent extends Component {
                     index={this.state.value}
                     onChangeIndex={this.handleChangeIndex}
                 >
-                    <TabContainer><OneWayTabComponent /></TabContainer>
-                    <TabContainer><ReturnTabComponent /></TabContainer>
+                    <TabContainer><OneWayTabComponent onSubmit={this.onSubmit} /></TabContainer>
+                    <TabContainer><ReturnTabComponent onSubmit={this.onSubmit} /></TabContainer>
                 </SwipeableViews>
                 <StepSlider />
 
             </div>
         );
+    }
+
+    onSubmit = (search) => {
+        this.props.searchFlights(search);
     }
 }
 
