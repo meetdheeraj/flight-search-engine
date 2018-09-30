@@ -22,3 +22,7 @@
 .flight-name, .flight-origin-destination {
     font-weight: bold;
 }
+
+.flight-icon {
+    padding-left: 24px;
+}

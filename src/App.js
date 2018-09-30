@@ -12,9 +12,9 @@ class App extends Component {
     super(props);
     this.state = {
       searchObject: {
-        origin: "PNQ",
-        destination: "DEL",
-        dateOfDeparture: "2018-09-21",
+        origin: "",
+        destination: "",
+        dateOfDeparture: "",
         dateOfReturn: "",
         noOfPassengers: "",
         price: ""
@@ -38,12 +38,14 @@ class App extends Component {
                 spacing={8}
                 direction="row"
               >
-                <Grid item md={3}>
+                <Grid item md={4}>
                   <div className="search-section" >
-                    <SearchSectionComponent handleSliderChange={this.handleSliderChange} searchFlights={this.searchFlights} />
+                    <SearchSectionComponent searchFlights={this.searchFlights}
+                      searchObject={this.state.searchObject}
+                      handleSliderChange={this.handleSliderChange} />
                   </div>
                 </Grid>
-                <Grid item md={9}>
+                <Grid item md={8}>
                   <div className="search-result">
                     <Grid item md={9}>
                       <div className="search-result-header">
@@ -65,16 +67,15 @@ class App extends Component {
     );
   }
 
+  searchFlights = (search) => {
+    this.setState({ searchObject: search });
+  }
+
   handleSliderChange = (value) => {
     let searchObject = this.state.searchObject;
     searchObject.price = value;
     this.setState({ searchObject });
-    console.log("################", value);
   };
-
-  searchFlights = (search) => {
-    this.setState({ searchObject: search }, () => { console.log("******appJS : :", this.state.searchObject) });
-  }
 }
 
 export default App;

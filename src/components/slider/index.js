@@ -6,7 +6,7 @@ import './slider.css';
 
 const styles = {
     root: {
-        width: 290,
+        width: 300,
     },
 };
 
@@ -26,11 +26,11 @@ class StepSlider extends React.Component {
 
         return (
             <div className="price-slider-container">
-            <div className="slider-text">{"Refine your search by price"}</div>
-            <div className="slider-text">{`Price upto Rs. ${this.state.value}`}</div>
-            <div className={classes.root}>
-                <Slider value={value} min={0} max={10000} step={1} onChange={this.handleChange} />
-            </div>
+                <div className="slider-text">{"Refine your search by price"}</div>
+                <div className="slider-text">{`Price upto Rs. ${this.state.value}`}</div>
+                <div className={classes.root}>
+                    <Slider value={value} min={0} max={10000} step={1} onChange={this.handleChange} />
+                </div>
             </div>
         );
     }

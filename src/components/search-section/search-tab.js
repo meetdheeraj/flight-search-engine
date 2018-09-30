@@ -3,18 +3,13 @@ import InputBar from '../input-bar';
 import DatePickers from '../date-picker';
 import DropDown from '../drop-down';
 import ButtonWithIcon from '../button-with-icon';
+import StepSlider from './../slider';
 
 class SearchTabComponent extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      search: {
-        origin: "",
-        destination: "",
-        dateOfDeparture: "",
-        dateOfReturn: "",
-        noOfPassengers: ""
-      }
+      search: this.props.searchObject
     };
   }
   render() {
@@ -26,6 +21,7 @@ class SearchTabComponent extends Component {
         {this.props.showReturn && <DatePickers onChange={this.getDateOfReturn} value={this.state.search.dateOfReturn} label="Return date" />}
         <DropDown onChange={this.getNoOfPassengers} value={this.state.search.noOfPassengers} label="Passengers" />
         <ButtonWithIcon search={this.state.search} onSubmit={this.onSubmit} />
+        <StepSlider handleSliderChange={this.handleSliderChange} />
       </div>
     );
   }
@@ -63,6 +59,13 @@ class SearchTabComponent extends Component {
     search.noOfPassengers = value;
     this.setState({ search: search })
   }
+
+  handleSliderChange = (value) => {
+    let search = this.state.search;
+    search.price = value;
+    this.setState({ search });
+    this.props.handleSliderChange(value);
+  };
 }
 
 export default SearchTabComponent;

@@ -10,24 +10,27 @@ class SearchResultHeader extends Component {
     const { classes } = this.props;
     return (
       <div className="search-result-header">
-      <Paper className={`${classes.root} search-result`} elevation={4}>
-      <Grid
-            container
-            spacing={8}
-            direction="row"
-          >
-          <Grid item md={8}>
-        <text className="city-name">{this.props.origin}</text>
-        <span className="keyboard-arrow-right"><KeyboardArrowRight /></span>
-        <text className="city-name">{this.props.destination}</text>
-        <span className="keyboard-arrow-right"><KeyboardArrowRight /></span>
-        <text className="city-name">{this.props.origin}</text>
-        </Grid>
-        <Grid item md={4}>
-        <div className="departure-date"><text className="header">Depart : </text>{this.props.dateOfDeparture}</div>
-        {this.props.dateOfReturn && <div className="return-date"><text className="header">Return : </text>{this.props.dateOfReturn}</div>}
-        </Grid>
-        </Grid>
+        <Paper className={`${classes.root} search-result`} elevation={4}>
+          {(this.props.origin !== "" || this.props.destination !== ""
+            || this.props.dateOfDeparture !== "")
+            ? <Grid
+              container
+              spacing={8}
+              direction="row"
+            >
+              <Grid item md={8}>
+                <text className="city-name">{this.props.origin}</text>
+                <span className="keyboard-arrow-right"><KeyboardArrowRight /></span>
+                <text className="city-name">{this.props.destination}</text>
+                <span className="keyboard-arrow-right"><KeyboardArrowRight /></span>
+                <text className="city-name">{this.props.origin}</text>
+              </Grid>
+              <Grid item md={4}>
+                <div className="departure-date"><text className="header">Depart : </text>{this.props.dateOfDeparture}</div>
+                {this.props.dateOfReturn && <div className="return-date"><text className="header">Return : </text>{this.props.dateOfReturn}</div>}
+              </Grid>
+            </Grid> : <div>The journey of a thousand miles begins with a single step. <br />
+              Go on, search your flights!</div>}
         </Paper>
       </div>
     );

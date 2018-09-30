@@ -13,6 +13,6 @@ it('<FlightComponent /> renders without crashing', () => {
     price: "4000",
     date: "2018-09-21"
   }
-  ReactDOM.render(<FlightComponent flight={flight}/>, div);
+  ReactDOM.render(<FlightComponent oneWayFlight={flight}/>, div);
   ReactDOM.unmountComponentAtNode(div);
 });
