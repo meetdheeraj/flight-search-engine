@@ -18,7 +18,7 @@ You will also see any lint errors in the console.
 Launches the test runner in the interactive watch mode.<br>
 
 ## How it looks on initial load
-![page grab on initial load](img/load.png)<br>
+![page grab on initial load](img/onload.png)<br>
 
 ## How it looks on search with no data
 ![page grab on no data](img/nodata.png)<br>
