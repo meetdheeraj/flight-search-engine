@@ -18,11 +18,11 @@ You will also see any lint errors in the console.
 Launches the test runner in the interactive watch mode.<br>
 
 ## How it looks on initial load
-![page grab on initial load](https://imgur.com/UBaVpq1)<br>
+![page grab on initial load](img/load.png)<br>
 
 ## How it looks on search with no data
-![page grab on no data](https://imgur.com/a35OUVh)<br>
+![page grab on no data](img/nodata.png)<br>
 
 ## Move the slider a bit right and boom
-![page grab on available data](https://imgur.com/omI5qVl)<br>
+![page grab on available data](img/data.png)<br>
 
